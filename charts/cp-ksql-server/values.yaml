@@ -78,7 +78,7 @@ external:
 ## Headless mode
 ## ref: https://docs.confluent.io/current/ksql/docs/installation/server-config/index.html
 ksql:
-  headless: true
+  headless: false
 
 ## You can list load balanced service endpoint, or list of all brokers (which is hard in K8s).  e.g.:
 ## bootstrapServers: "PLAINTEXT://dozing-prawn-kafka-headless:9092"
@@ -92,11 +92,11 @@ cp-schema-registry:
 # KSQL configuration options
 ## ref: https://docs.confluent.io/current/ksql/docs/installation/server-config/config-reference.html
 ## ref: https://docs.confluent.io/current/ksql/docs/installation/server-config/security.html
-configurationOverrides: {}
-  # "ksql.streams.producer.retries": "2147483647"
-  # "ksql.sink.replicas": "3"
-  # "ksql.streams.replication.factor": "3"
-  # "listeners": "http://0.0.0.0:8088"
-  # "security.protocol": "SASL_SSL"
-  # "sasl.mechanism": "PLAIN"
-  # "sasl.jaas.config": "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"test\" password=\"testpassword\";"
+configurationOverrides:
+  "ksql.streams.producer.retries": "2147483647"
+  "ksql.sink.replicas": "3"
+  "ksql.streams.replication.factor": "3"
+  "listeners": "http://0.0.0.0:8088"
+  "security.protocol": "SASL_SSL"
+  "sasl.mechanism": "PLAIN"
+  "sasl.jaas.config": "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"test\" password=\"testpassword\";"
