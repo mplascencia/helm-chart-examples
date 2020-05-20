@@ -38,9 +38,6 @@ configurationOverrides:
   "offset.storage.topic": ksql-cli-tutorial-offsets
   "status.storage.topic": ksql-cli-tutorial-status
   "replication.factor": 3
-  "config.storage.replication.factor": 3
-  "offset.storage.replication.factor": 3
-  "status.storage.replication.factor": 3
   "log4j.root.loglevel": INFO
   "log4j.loggers": org.reflections=ERROR
   "classpath": /usr/share/java/monitoring-interceptors/monitoring-interceptors-5.0.1.jar
